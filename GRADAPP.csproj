@@ -10,11 +10,25 @@
       <PrivateAssets Condition="'%(PackageReference.Version)' == ''">all</PrivateAssets>
       <Publish Condition="'%(PackageReference.Version)' == ''">true</Publish>
     </PackageReference>
-    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="APIModels\" />
     <Folder Include="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="GRADAPP.Infrastructure\Data\ActivityRepository.cs" />
+    <Compile Remove="GRADAPP.Infrastructure\Data\ActivityRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="GRADAPP.Core\obj\Debug\netcoreapp2.2\GRADAPP.Core.assets.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="GRADAPP.Core\GRADAPP.Core.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="GRADAPP.Infrastructure\GRADAPP.Infrastructure.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 </Project>

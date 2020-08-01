@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace GRADAPP.APIModels
+namespace GRADAPP.Core.Models
 {
-    public class FamilyModel
+    public class Family
     {
         public int Id { get; set; }
+        
+
         public string Name { get; set; }
-        public ICollection<ActivityModel> Activities { get; set; }
+        public ICollection<Activity> Activities { get; set; }
+
         
     }
 }

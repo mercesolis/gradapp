@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "/Users/merc/Documents/DevFolder/LCA_301.NET/gradapp/GRADAPP.csproj": {}
+    "/Users/merc/Documents/DevFolder/LCA_301.NET/gradapp/GRADAPP.Infrastructure/GRADAPP.Infrastructure.csproj": {}
   },
   "projects": {
     "/Users/merc/Documents/DevFolder/LCA_301.NET/gradapp/GRADAPP.Core/GRADAPP.Core.csproj": {
@@ -60,75 +60,6 @@
         }
       }
     },
-    "/Users/merc/Documents/DevFolder/LCA_301.NET/gradapp/GRADAPP.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "/Users/merc/Documents/DevFolder/LCA_301.NET/gradapp/GRADAPP.csproj",
-        "projectName": "GRADAPP",
-        "projectPath": "/Users/merc/Documents/DevFolder/LCA_301.NET/gradapp/GRADAPP.csproj",
-        "packagesPath": "/Users/merc/.nuget/packages/",
-        "outputPath": "/Users/merc/Documents/DevFolder/LCA_301.NET/gradapp/obj/",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "/Users/merc/.config/NuGet/NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp2.2"
-        ],
-        "sources": {
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp2.2": {
-            "projectReferences": {
-              "/Users/merc/Documents/DevFolder/LCA_301.NET/gradapp/GRADAPP.Core/GRADAPP.Core.csproj": {
-                "projectPath": "/Users/merc/Documents/DevFolder/LCA_301.NET/gradapp/GRADAPP.Core/GRADAPP.Core.csproj"
-              },
-              "/Users/merc/Documents/DevFolder/LCA_301.NET/gradapp/GRADAPP.Infrastructure/GRADAPP.Infrastructure.csproj": {
-                "projectPath": "/Users/merc/Documents/DevFolder/LCA_301.NET/gradapp/GRADAPP.Infrastructure/GRADAPP.Infrastructure.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp2.2": {
-          "dependencies": {
-            "Microsoft.AspNetCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
-            },
-            "Microsoft.NETCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.301/RuntimeIdentifierGraph.json"
-        }
-      }
-    },
     "/Users/merc/Documents/DevFolder/LCA_301.NET/gradapp/GRADAPP.Infrastructure/GRADAPP.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -152,7 +83,11 @@
         },
         "frameworks": {
           "netcoreapp2.2": {
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/merc/Documents/DevFolder/LCA_301.NET/gradapp/GRADAPP.Core/GRADAPP.Core.csproj": {
+                "projectPath": "/Users/merc/Documents/DevFolder/LCA_301.NET/gradapp/GRADAPP.Core/GRADAPP.Core.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

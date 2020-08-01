@@ -1,0 +1,45 @@
+﻿<Properties StartupConfiguration="{178C352C-27A8-4261-8EF3-BE43930D10F3}|Default">
+  <MonoDevelop.Ide.ItemProperties.GRADAPP.Infrastructure FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="GRADAPP.Core/Models/Activity.cs">
+    <Files>
+      <File FileName="APIModels/ActivityModel.cs" Line="2" Column="1" />
+      <File FileName="APIModels/FamilyModel.cs" Line="1" Column="1" />
+      <File FileName="Controllers/ActivitiesController.cs" Line="20" Column="88" />
+      <File FileName="Services/UserService.cs" Line="1" Column="1" />
+      <File FileName="Services/IActivityRepository.cs" Line="1" Column="1" />
+      <File FileName="GRADAPP.Infrastructure/Data/ActivityRepository.cs" Line="88" Column="1" />
+      <File FileName="GRADAPP.Infrastructure/Data/AppDbContext.cs" Line="21" Column="1" />
+      <File FileName="GRADAPP.Core/Models/Activity.cs" Line="10" Column="29" />
+      <File FileName="Controllers/ValuesController.cs" Line="1" Column="1" />
+      <File FileName="APIModels/ActivityMappingExtension.cs" Line="1" Column="1" />
+      <File FileName="APIModels/FamilyMappingExtensions.cs" Line="10" Column="53" />
+      <File FileName="GRADAPP.Core/Models/Family.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="GRADAPP" expanded="True">
+            <Node name="GRADAPP" expanded="True">
+              <Node name="APIModels" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+            </Node>
+            <Node name="GRADAPP.Core" expanded="True">
+              <Node name="Models" expanded="True">
+                <Node name="Activity.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="GRADAPP.Infrastructure" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.GRADAPP PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.GRADAPP.Core FirstBuild="True" />
+</Properties>

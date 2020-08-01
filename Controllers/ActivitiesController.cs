@@ -17,12 +17,15 @@ namespace GRADAPP.Controllers
 
         public ActivitiesController(IActivityRepository activityRepository)
         {
-            _activityRepository = activityRepository;
+            _activityRepository = activityRepository; //should this be repo or service?
         }
 
     };
 
     [HttpGet]
-    public I
+    public IActionResult Get()
+    {
+        return Ok(_activityService.GetAll());
+    }
     
 }
