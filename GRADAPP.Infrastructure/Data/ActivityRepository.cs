@@ -5,8 +5,6 @@ using GRADAPP.Core.Services;
 using GRADAPP.Core.Models;
 using Microsoft.EntityFrameworkCore;
 
-
-
 namespace GRADAPP.Infrastructure.Data
 {
     public class ActivityRepository : IActivityRepository
@@ -28,16 +26,14 @@ namespace GRADAPP.Infrastructure.Data
         public Activity Get(int id)
         {
             return _dbContext.Activities
-                .Include(a => a.ActivityType)
-                .Include(a => a.User)
+                .Include(a => a.Family)
                 .SingleOrDefault(b => b.Id == id);
         }
 
         public IEnumerable<Activity> GetAll()
         {
             return _dbContext.Activities
-                .Include(a => a.ActivityType)
-                .Include(a => a.User)
+                .Include(a => a.Family)
                 .ToList();
         }
 
@@ -74,12 +70,11 @@ namespace GRADAPP.Infrastructure.Data
 
 
         // TODO: Class Project: Add GetAllForUser() method
-        public IEnumerable<Activity> GetAllForUser(string userId)
+        public IEnumerable<Activity> GetAllForUser(int familyId)
         {
             return _dbContext.Activities
-                .Include(a => a.ActivityType)
-                .Include(a => a.User)
-                .Where(a => a.UserId == userId) // only for the given user
+                .Include(a => a.Family)
+                .Where(a => a.FamilyId == familyId) // only for the given user
                 .ToList();
         }
     }

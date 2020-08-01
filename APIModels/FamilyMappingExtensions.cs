@@ -13,28 +13,31 @@ namespace GRADAPP.APIModels
             {
                 Id = family.Id,
                 Name = family.Name,
+                
             };
         }
-    }
 
-    public static Family ToDomainModel(this FamilyModel familyModel)
-    {
-        return new Family
+
+        public static Family ToDomainModel(this FamilyModel familyModel)
         {
-            
-            Id = familyModel.Id,
-           
-        };
-    }
+            return new Family
+            {
 
-    public static IEnumerable<FamilyModel> ToApiModel(this IEnumerable<Family> family)
-    {
-        return family.Select(f => f.ToApiModel());
-    }
+                Id = familyModel.Id,
+                Name = familyModel.Name
 
-    public static IEnumerable<Family> ToDomainModel(this IEnumerable<FamilyModel> familyModels)
-    {
-        return familyModels.Select(f => f.ToDomainModel());
+            };
+        }
+
+        public static IEnumerable<FamilyModel> ToApiModel(this IEnumerable<Family> family)
+        {
+            return family.Select(f => f.ToApiModel());
+        }
+
+        public static IEnumerable<Family> ToDomainModel(this IEnumerable<FamilyModel> familyModels)
+        {
+            return familyModels.Select(f => f.ToDomainModel());
+        }
     }
 }
     

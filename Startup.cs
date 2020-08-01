@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GRADAPP.Core.Services;
+using GRADAPP.Infrastructure.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +28,11 @@ namespace GRADAPP
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddDbContext<AppDbContext>();
+            services.AddScoped<IFamilyRepository, FamilyRepository>();
+            services.AddScoped<IActivityService, ActivityService>();
+            services.AddScoped<IActivityRepository, ActivityRepository>();
+            services.AddScoped<IFamilyService, FamilyService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

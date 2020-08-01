@@ -1,15 +1,13 @@
 ﻿using System;
 using GRADAPP.Core.Models;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace GRADAPP.Infrastructure.Data
 {
-    public class AppDbContext
-    {
-        public class AppDbContext : IdentityDbContext
+    
+        public class AppDbContext : DbContext
         {
-            public DbSet<Family> Names { get; set; }
+            public DbSet<Family> Members { get; set; }
             public DbSet<Activity> Activities { get; set; }
             // NOTE that we don't have to define a Users DbSet. It is given to us by IdentityDbContext.
 
@@ -26,22 +24,18 @@ namespace GRADAPP.Infrastructure.Data
             {
                 base.OnModelCreating(builder);
 
-                builder.Entity<ActivityType>().HasData(
-                    new ActivityType { Id = 1, Name = "Running", RecordType = RecordType.DurationAndDistance },
-                    new ActivityType { Id = 2, Name = "Weights", RecordType = RecordType.DurationOnly },
-                    new ActivityType { Id = 3, Name = "Walking", RecordType = RecordType.DurationAndDistance }
-                );
-
-                builder.Entity<User>().HasData(
-                    new User { Id = "123", FirstName = "John", LastName = "Doe" }
-                );
-
-                // TODO: configure some seed data in the books table
                 builder.Entity<Activity>().HasData(
-                    new Activity { Id = 1, UserId = "123", ActivityTypeId = 1, Date = new DateTime(2019, 6, 19), Distance = 3, Duration = 30, Notes = "Hot!!!!" }
+                    new Activity { Id = 1, Name = "school", Date = "7/31/20", FamilyId = 1,}
+                    
                 );
+
+                builder.Entity<Family>().HasData(
+                    new Family { Id = 1, Name = "John" }
+                );
+
+                
 
             }
         }
-    }
+    
 }

@@ -23,12 +23,4 @@
   <ItemGroup>
     <None Remove="GRADAPP.Core\obj\Debug\netcoreapp2.2\GRADAPP.Core.assets.cache" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="GRADAPP.Core\GRADAPP.Core.csproj">
-      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
-    </ProjectReference>
-    <ProjectReference Include="GRADAPP.Infrastructure\GRADAPP.Infrastructure.csproj">
-      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
-    </ProjectReference>
-  </ItemGroup>
 </Project>

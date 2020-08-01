@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using GRADAPP.Core.Models;
 
-namespace GRADAPP.Services
+namespace GRADAPP.Core.Services
 {
     public interface IActivityRepository
     {
@@ -13,8 +13,9 @@ namespace GRADAPP.Services
         // Update
         Activity Update(Activity todo);
         // Delete
-        void Remove(User todo);
+        void Remove(Activity todo);
         // List
         IEnumerable<Activity> GetAll();
+        IEnumerable<Activity> GetAllForUser(int familyId);
     }
 }
