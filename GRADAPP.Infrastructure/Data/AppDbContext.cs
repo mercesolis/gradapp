@@ -14,7 +14,7 @@ namespace GRADAPP.Infrastructure.Data
             // This method runs once when the DbContext is first used.
             protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             {
-                optionsBuilder.UseSqlite("Data Source=../GRADAPP.Infrastructure.db");
+                optionsBuilder.UseSqlite("Data Source=../GRADAPP.Infrastructure/familyapp.db");
             }
 
             // This method runs once when the DbContext is first used.
@@ -24,14 +24,16 @@ namespace GRADAPP.Infrastructure.Data
             {
                 base.OnModelCreating(builder);
 
-                builder.Entity<Activity>().HasData(
+            builder.Entity<Family>().HasData(
+                   new Family { Id = 1, Name = "John" }
+               );
+
+            builder.Entity<Activity>().HasData(
                     new Activity { Id = 1, Name = "school", Date = "7/31/20", FamilyId = 1,}
                     
                 );
 
-                builder.Entity<Family>().HasData(
-                    new Family { Id = 1, Name = "John" }
-                );
+               
 
                 
 

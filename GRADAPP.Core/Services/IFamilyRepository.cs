@@ -7,7 +7,7 @@ namespace GRADAPP.Core.Services
     public interface IFamilyRepository
     {
         // Create
-        Family Add(Family todo);
+        Family Add(Family family);
         // Read
         Family Get(int id);
         // Update

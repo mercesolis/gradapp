@@ -1,33 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using GRADAPP.Core.Services;
 using GRADAPP.Core.Models;
+using GRADAPP.Core.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace GRADAPP.Infrastructure.Data
 {
-    public class ActivityRepository : IActivityRepository
+    public class ActivityRepo : IActivityRepository
     {
         private readonly AppDbContext _dbContext;
-
-        public ActivityRepository(AppDbContext dbContext)
+        public ActivityRepo(AppDbContext dbContext)
         {
             _dbContext = dbContext;
         }
 
-        public Activity Add(Activity item)
+        public Activity Add(Activity activity)
         {
-            _dbContext.Activities.Add(item);
+            _dbContext.Activities.Add(activity);
             _dbContext.SaveChanges();
-            return item;
+            return activity;
         }
 
-        public Activity Get(int id)
+        public Activity Get(int Id)
         {
             return _dbContext.Activities
                 .Include(a => a.Family)
-                .SingleOrDefault(b => b.Id == id);
+                .SingleOrDefault(b => b.Id == Id);
         }
 
         public IEnumerable<Activity> GetAll()
@@ -61,9 +60,10 @@ namespace GRADAPP.Infrastructure.Data
             return currentActivity;
         }
 
-        public void Remove(Activity Activity)
+        public void Remove(Activity activity)
         {
-            _dbContext.Activities.Remove(Activity);
+
+            _dbContext.Activities.Remove(activity);
             _dbContext.SaveChanges();
         }
 
@@ -79,5 +79,3 @@ namespace GRADAPP.Infrastructure.Data
         }
     }
 }
-    
-

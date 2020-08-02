@@ -7,13 +7,13 @@ namespace GRADAPP.Core.Services
     public interface IActivityRepository
     {
         // Create
-        Activity Add(Activity todo);
+        Activity Add(Activity Id);
         // Read
-        Activity Get(int id);
+        Activity Get(int Id);
         // Update
-        Activity Update(Activity todo);
+        Activity Update(Activity Id);
         // Delete
-        void Remove(Activity todo);
+        void Remove(Activity activity);
         // List
         IEnumerable<Activity> GetAll();
         IEnumerable<Activity> GetAllForUser(int familyId);

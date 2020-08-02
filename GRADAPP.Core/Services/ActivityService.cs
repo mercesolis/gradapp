@@ -14,32 +14,39 @@ namespace GRADAPP.Core.Services
 
         public Activity Add(Activity Activity)
         {
-            throw new NotImplementedException();
+           _activityRepository.Add(Activity);
+           
+            return Activity;
+
+           
+
         }
 
         public Activity Get(int Id)
         {
-            throw new NotImplementedException();
+            return _activityRepository.Get(Id);
         }
 
         public IEnumerable<Activity> GetAll()
         {
-            throw new NotImplementedException();
+            return _activityRepository.GetAll();
         }
 
         public IEnumerable<Activity> GetAllForUser(int familyId)
         {
-            throw new NotImplementedException();
+            return _activityRepository.GetAllForUser(familyId);
         }
 
         public void Remove(int Id)
         {
-            throw new NotImplementedException();
+            var activity = _activityRepository.Get(Id);
+            _activityRepository.Remove(activity);
         }
 
         public Activity Update(Activity Activity)
         {
-            throw new NotImplementedException();
+            _activityRepository.Update(Activity);
+            return Activity;
         }
     }
 }

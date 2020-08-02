@@ -1,0 +1,4 @@
+/Users/merc/Documents/DevFolder/LCA_301.NET/gradapp/GRADAPP.Core/obj/Debug/netcoreapp2.2/GRADAPP.Core.csprojAssemblyReference.cache
+/Users/merc/Documents/DevFolder/LCA_301.NET/gradapp/GRADAPP.Core/obj/Debug/netcoreapp2.2/GRADAPP.Core.AssemblyInfoInputs.cache
+/Users/merc/Documents/DevFolder/LCA_301.NET/gradapp/GRADAPP.Core/obj/Debug/netcoreapp2.2/GRADAPP.Core.AssemblyInfo.cs
+/Users/merc/Documents/DevFolder/LCA_301.NET/gradapp/GRADAPP.Core/obj/Debug/netcoreapp2.2/GRADAPP.Core.csproj.CoreCompileInputs.cache

@@ -14,27 +14,29 @@ namespace GRADAPP.Core.Services
 
         public Family Add(Family family)
         {
-            throw new NotImplementedException();
+            _familyRepository.Add(family);
+            return family;
         }
 
         public Family Get(int Id)
         {
-            throw new NotImplementedException();
+            return _familyRepository.Get(Id);
         }
 
         public IEnumerable<Family> GetAll()
         {
-            throw new NotImplementedException();
+            return _familyRepository.GetAll();
         }
 
         public void Remove(int Id)
         {
-            throw new NotImplementedException();
+            _familyRepository.Remove(Id);
         }
 
         public Family Update(Family family)
         {
-            throw new NotImplementedException();
+            var Family = _familyRepository.Update(family);
+            return Family;
         }
     }
 }

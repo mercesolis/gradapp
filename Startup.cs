@@ -31,7 +31,7 @@ namespace GRADAPP
             services.AddDbContext<AppDbContext>();
             services.AddScoped<IFamilyRepository, FamilyRepository>();
             services.AddScoped<IActivityService, ActivityService>();
-            services.AddScoped<IActivityRepository, ActivityRepository>();
+            services.AddScoped<IActivityRepository, ActivityRepo>();
             services.AddScoped<IFamilyService, FamilyService>();
         }
 
